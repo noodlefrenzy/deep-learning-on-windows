@@ -1,0 +1,15 @@
+[global]
+device=gpu
+floatX=float32
+
+[nvcc]
+compiler_bindir=C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\amd64
+flags=--cl-version=2013
+
+[dnn.conv]
+algo_fwd = time_once
+algo_bwd_data = time_once
+algo_bwd_filter = time_once
+
+[lib]
+cnmem = .5
