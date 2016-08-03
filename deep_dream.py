@@ -8,10 +8,6 @@ e.g.:
 ```
 python deep_dream.py img/mypic.jpg results/dream
 ```
-
-It is preferable to run this script on GPU, for speed.
-If running on CPU, prefer the TensorFlow backend (much faster).
-
 Example results: http://i.imgur.com/FX6ROg9.jpg
 '''
 from __future__ import print_function

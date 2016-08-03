@@ -13,10 +13,6 @@ e.g.:
 ```
 python neural_style_transfer.py img/tuebingen.jpg img/starry_night.jpg results/my_result
 ```
-
-It is preferable to run this script on GPU, for speed.
-If running on CPU, prefer the TensorFlow backend (much faster).
-
 Example result: https://twitter.com/fchollet/status/686631033085677568
 
 # Details
