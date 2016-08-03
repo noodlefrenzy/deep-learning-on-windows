@@ -25,6 +25,9 @@ parser.add_argument('-d', '--dream_type', metavar='dream_type', type=str, defaul
 parser.add_argument('--weights_root', metavar='weights_root', type=str, 
                     default='F:/SkyDrive/Dev/datasets', 
                     help='Path to directory containing net weights file')
+parser.add_argument('-i', '--iterations', metavar='num_iterations',            
+                    dest='num_iterations', type=int, default=10, 
+                    help='Number of iterations to perform')
 
 args = parser.parse_args()
 base_image_path = args.base_image_path
@@ -212,7 +215,7 @@ evaluator = Evaluator()
 # run scipy-based optimization (L-BFGS) over the pixels of the generated image
 # so as to minimize the loss
 x = preprocess_image(base_image_path)
-for i in range(5):
+for i in range(args.num_iterations):
     print('Start of iteration', i)
     start_time = time.time()
 
